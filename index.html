@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculateur de dégats</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="content">
+        <h1>Calculateur de dégats</h1>
+        <form id="charDetails">
+            <table>
+                <tr>
+                    <td></td>
+                    <th>Personnage</th>
+                    <th>Cible</th>
+                </tr>
+                <tr>
+                    <th><label for="charLvlLabel">Niveau</label></th>
+                    <td><input type="number" id="charLvl" min=1 max=230 step="1"></td>
+                    <td><input type="number" id="targetLvl" min=1 max=230 step="1"></td>
+                </tr>
+                <tr>
+                    <th><label for="charAttaqueLabel">Attaque</label></th>
+                    <td><input type="number" id="charAttaque" min=1 max=10000000000 step="1"></td>
+                    <td><input type="number" id="targetAttaque" min=1 max=10000000000 step="1"></td>
+                </tr>
+                <tr>
+                    <th><label for="charDefenseLabel">Defense</label></th>
+                    <td><input type="number" id="charDefense" min=1 max=10000000000 step="1"></td>
+                    <td><input type="number" id="targetDefense" min=1 max=10000000000 step="1"></td>
+                </tr>
+                <tr>
+                    <th><label for="charBlocagepercentLabel">Defense</label></th>
+                    <td><input type="number" id="charBlocagepercent" min=1 max=100 step="1"></td>
+                    <td><input type="number" id="targetBlocagepercent" min=1 max=100 step="1"></td>
+                </tr>
+                <tr>
+                    <th><label for="charBlocagelabel">Defense</label></th>
+                    <td><input type="number" id="charBlocage" min=1 max=10000000000 step="1"></td>
+                    <td><input type="number" id="targetBlocage" min=1 max=10000000000 step="1"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="pve">&nbsp;</td>
+                    <td><input type="reset" value="Vider les champs" class="btn">&nbsp;</td>
+                    <td><input type="submit" value="Calculer" class="btn">&nbsp;</td>
+                </tr>
+            </table>
+        </form>
+        <br><br>
+    </div>
+
+    <div id="resultatpvp">
+        <h1>Resultats PvP</h1>
+        <table id="resultTablePVP" class="maTable">
+            <tr>
+                <th>Dégats infligés </th>
+                <th>Dégats reçus </th>
+            </tr>
+            <tr>
+                <th>damages</th>
+                <td id="char2targetDamages">N/A</th>
+                <td id="target2charDamages">N/A</th>
+            </tr>
+        </table>
+
+    </div>
+
+    <div id="resultatpve" style="display: none;">
+        <h1>Resultats PvE</h1>
+        <table id="resultTablePVE" class="maTable">
+            <tr>
+                <th>Lieu</th>
+                <th>Mob</th>
+                <th>Level</th>
+                <th>Coups donnés</th>
+                <th>Coups reçus</th>
+            </tr>
+            <tr>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+        </table>
+
+    </div>
+
+
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
